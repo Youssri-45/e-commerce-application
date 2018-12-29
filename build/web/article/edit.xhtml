@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Edit an Article</title>
+    </h:head>
+    <h:body style="background: url(resources/wall7.jpg) no-repeat center center fixed;">
+        <f:view>
+
+
+            <h:form>
+                <h1><h:outputText value="Edit"/></h1>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="Name:" for="nom" />
+                    <h:inputText id="nom" value="#{articleControler.article.nom}" title="Nom" />
+                    <h:outputLabel value="Description:" for="description" />
+                    <h:inputText id="description" value="#{articleControler.article.description}" title="Description" />
+                    <h:outputLabel value="Price:" for="prix" />
+                    <h:inputText id="prix" value="#{articleControler.article.prix}" title="Prix" />
+                    <h:outputLabel value="Image:" for="imageURL" />
+                    <h:inputText id="imageURL" value="#{articleControler.article.imageURL}" title="imageURL" />
+                    <h:commandButton value="Edit" action="#{articleControler.edit()}"/>
+                </h:panelGrid>
+                <h:commandLink value="Return" action="/article/adminSpace"/>
+            </h:form>
+        </f:view>
+
+    </h:body>
+</html>
+
